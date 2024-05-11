@@ -116,7 +116,11 @@ result = whisper.decode(model, mel, options)
 # print the recognized text
 print(result.text)
 ```
-
+## Joey's stream usage:
+```python
+python transcribe_demo.py
+```
+You can check different argument usages inside the transcribe_demo.py file. 
 ## More examples
 
 Please use the [🙌 Show and tell](https://github.com/openai/whisper/discussions/categories/show-and-tell) category in Discussions for sharing more example usages of Whisper and third-party extensions such as web demos, integrations with other tools, ports for different platforms, etc.
