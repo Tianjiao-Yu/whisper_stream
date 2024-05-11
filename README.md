@@ -8,26 +8,13 @@
 Whisper is a general-purpose speech recognition model. It is trained on a large dataset of diverse audio and is also a multitasking model that can perform multilingual speech recognition, speech translation, and language identification.
 
 
-## Approach
-
-![Approach](https://raw.githubusercontent.com/openai/whisper/main/approach.png)
-
-A Transformer sequence-to-sequence model is trained on various speech processing tasks, including multilingual speech recognition, speech translation, spoken language identification, and voice activity detection. These tasks are jointly represented as a sequence of tokens to be predicted by the decoder, allowing a single model to replace many stages of a traditional speech-processing pipeline. The multitask training format uses a set of special tokens that serve as task specifiers or classification targets.
-
 
 ## Setup
 
-We used Python 3.9.9 and [PyTorch](https://pytorch.org/) 1.10.1 to train and test our models, but the codebase is expected to be compatible with Python 3.8-3.11 and recent PyTorch versions. The codebase also depends on a few Python packages, most notably [OpenAI's tiktoken](https://github.com/openai/tiktoken) for their fast tokenizer implementation. You can download and install (or update to) the latest release of Whisper with the following command:
+Python 3.10 
+You can download and install (or update to) the latest release of Whisper with the following command:
 
     pip install -U openai-whisper
-
-Alternatively, the following command will pull and install the latest commit from this repository, along with its Python dependencies:
-
-    pip install git+https://github.com/openai/whisper.git 
-
-To update the package to the latest version of this repository, please run:
-
-    pip install --upgrade --no-deps --force-reinstall git+https://github.com/openai/whisper.git
 
 It also requires the command-line tool [`ffmpeg`](https://ffmpeg.org/) to be installed on your system, which is available from most package managers:
 
